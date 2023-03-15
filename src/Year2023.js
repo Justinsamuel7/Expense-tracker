@@ -14,21 +14,34 @@ export default function Year2023() {
   ])
 
   return (
+    
     <div>
       <br/>
+      <h3>2023</h3>
+      <br/>
+      <div>
       {ExpTitle.map((ele,index)=>{
       return(
-        <li key={index}>
-        <div class="divflex">
-          <span>{ExpTitle.title}</span>
-          <span>{ExpTitle.amount}</span>
-          <span>{ExpTitle.date}</span>
+        <div class="divflex" key={index}>
+          <span>{ele.title}</span>
+          <span>{ele.amount}</span>
+          <span>{ele.date}</span>
           <span>Remove</span>
         </div>
-        </li>
       )
       })}
-      <h1>2023</h1>
+
+      <br/>
+      </div>
+
+      <div>
+      <input type="text" placeholder="Title" onChange={}/>
+      <input type="Number"/>
+      <input type="date"/>
+      <button >Add</button>
+
+      </div>
+
     </div>
   );
 }
