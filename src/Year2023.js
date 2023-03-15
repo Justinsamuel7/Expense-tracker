@@ -13,8 +13,13 @@ export default function Year2023() {
     },
   ])
 
+  function handleinputs()
+  {
+
+  }
+
   return (
-    
+
     <div>
       <br/>
       <h3>2023</h3>
@@ -34,12 +39,11 @@ export default function Year2023() {
       <br/>
       </div>
 
-      <div>
-      <input type="text" placeholder="Title" onChange={}/>
-      <input type="Number"/>
-      <input type="date"/>
+      <div class="divflex">
+      <input type="text" name="title" placeholder="Title" onChange={handleinputs}/>
+      <input type="Number" name="amount" placeholder="Price" onChange={handleinputs}/>
+      <input type="date" name="date" placeholder="Date" onChange={handleinputs}/>
       <button >Add</button>
-
       </div>
 
     </div>
