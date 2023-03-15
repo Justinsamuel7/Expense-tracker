@@ -18,6 +18,27 @@ export default function Year2023() {
 
   }
 
+  function addExpense()
+  {
+    setExpTitle([...ExpTitle,{
+      title : "boots",
+      amount : "5000",
+      date : "3456"
+    }])
+
+  }
+
+  function removeExpense(index)
+  {
+    // let temp = [...ExpTitle]
+    // temp.splice(index,1)
+    // setExpTitle(temp)
+    console.log(index)
+
+  }
+
+  
+
   return (
 
     <div>
@@ -31,7 +52,7 @@ export default function Year2023() {
           <span>{ele.title}</span>
           <span>{ele.amount}</span>
           <span>{ele.date}</span>
-          <span>Remove</span>
+          <button onClick={removeExpense(index)}>Remove</button>
         </div>
       )
       })}
@@ -43,7 +64,7 @@ export default function Year2023() {
       <input type="text" name="title" placeholder="Title" onChange={handleinputs}/>
       <input type="Number" name="amount" placeholder="Price" onChange={handleinputs}/>
       <input type="date" name="date" placeholder="Date" onChange={handleinputs}/>
-      <button >Add</button>
+      <button onClick={addExpense}>Add</button>
       </div>
 
     </div>
