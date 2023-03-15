@@ -7,11 +7,18 @@ export default function Year2023() {
 
   let [ExpTitle, setExpTitle] = useState([
     {
+      title : "",
+      amount : "",
+      date : ""
     },
   ])
 
-  function handleinputs()
+  function handleinputs(e)
   {
+    // let i = ExpTitle.length-1
+    // let key=e.target.name
+    // setExpTitle([...ExpTitle , ExpTitle[i][key]=e.target.value])
+ 
 
   }
 
