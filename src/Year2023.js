@@ -7,9 +7,6 @@ export default function Year2023() {
 
   let [ExpTitle, setExpTitle] = useState([
     {
-      title : "boots",
-      amount : "5000",
-      date : "3456"
     },
   ])
 
@@ -30,9 +27,9 @@ export default function Year2023() {
 
   function removeExpense(index)
   {
-    // let temp = [...ExpTitle]
-    // temp.splice(index,1)
-    // setExpTitle(temp)
+    let temp = [...ExpTitle]
+    temp.splice(index,1)
+    setExpTitle(temp)
     console.log(index)
 
   }
@@ -48,11 +45,12 @@ export default function Year2023() {
       <div>
       {ExpTitle.map((ele,index)=>{
       return(
+        
         <div class="divflex" key={index}>
           <span>{ele.title}</span>
           <span>{ele.amount}</span>
           <span>{ele.date}</span>
-          <button onClick={removeExpense(index)}>Remove</button>
+          <button onClick={()=>removeExpense(index)}>Remove</button>
         </div>
       )
       })}
