@@ -18,9 +18,9 @@ export default function Year2023() {
   function addExpense()
   {
     setExpTitle([...ExpTitle,{
-      title : "boots",
-      amount : "5000",
-      date : "3456"
+      title : "",
+      amount : "",
+      date : ""
     }])
 
   }
@@ -45,7 +45,6 @@ export default function Year2023() {
       <div>
       {ExpTitle.map((ele,index)=>{
       return(
-        
         <div class="divflex" key={index}>
           <span>{ele.title}</span>
           <span>{ele.amount}</span>
