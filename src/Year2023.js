@@ -6,11 +6,8 @@ import { Routes, Route, Link, useNavigate } from 'react-router-dom';
 export default function Year2023() {
 
   let [ExpTitle, setExpTitle] = useState([
-    {
-      title : "",
-      amount : "",
-      date : ""
-    },
+    // {
+    // },
   ])
 
   function handleinputs(e)
@@ -56,7 +53,8 @@ export default function Year2023() {
           <span>{ele.title}</span>
           <span>{ele.amount}</span>
           <span>{ele.date}</span>
-          <button onClick={()=>removeExpense(index)}>Remove</button>
+          {ExpTitle.length > 0 ? <button onClick={()=>removeExpense(index)}>Remove</button> : ''}
+          
         </div>
       )
       })}
